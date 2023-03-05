@@ -1,35 +1,33 @@
 <script lang="ts">
   import ContextMenuParentNode from "./ContextMenuParentNode.svelte";
-  import { ContextMenuSchema } from "./ContextMenuSchema";
+  import { contextMenuSchema, browserSchema } from "./ContextMenuSchema";
   
   export let open = false;
+  export let renderDefaults = true;
+
   let menuXPosition = 0;
   let menuYPosition = 0;
+  let contain:HTMLElement|null = null;
+
+  $: contain = $contextMenuSchema?.container || null;
 
   function open_context_menu(event:MouseEvent){
+    open = false;
+    
+    if(!!contain && 
+      <HTMLElement> event.target !== contain && 
+      ![...contain.children].includes(<HTMLElement> event.target)
+    ) return
+    
     event.preventDefault();
     open = true;
     menuXPosition = event.clientX;
     menuYPosition = event.clientY;
-    console.log(event);
   }
 
   function handle_click_outside(event:MouseEvent){
-    if(event.target.getAttribute("id") !== "svelte-context-menu"){
-      open = false;
-    } 
+    if(event.target.getAttribute("id") !== "svelte-context-menu") open = false; 
   }
-
-  /* 
-    default browser actions 
-    - back
-    - reload
-    - print
-    - save as
-    - view source
-    - inspect
-  */
-  
 </script>
 
 <svelte:window on:contextmenu={open_context_menu} on:click={handle_click_outside}/>
@@ -37,7 +35,7 @@
 {#if open}
   <div id="svelte-context-menu" style:--context-menu-x={`${menuXPosition}px`} style:--context-menu-y={`${menuYPosition}px`}>
     <ul>
-    {#each $ContextMenuSchema as item}
+    {#each $contextMenuSchema.nodes as item}
       {#if item.node_type == "action"}
         <li class="svelte-context-menu-node">
           <button on:click={item.callback}>{item.node_content}</button>
@@ -46,6 +44,18 @@
         <ContextMenuParentNode {item} />
       {/if}
     {/each}
+    {#if renderDefaults}
+      <hr/>
+      {#each $browserSchema.nodes as item}
+        {#if item.node_type == "action"}
+          <li class="svelte-context-menu-node">
+            <button on:click={item.callback}>{item.node_content}</button>
+          </li>
+        {:else if item.node_type == "parent"}
+          <ContextMenuParentNode {item} />
+        {/if}
+      {/each}
+    {/if}
     </ul>
   </div>
 {/if}
@@ -55,12 +65,12 @@
     position: absolute;
     top: var(--context-menu-y);
     left: var(--context-menu-x);
-    width: 200px;
-    height: 200px;
+    width: max-content;
+    height: auto;
     background-color: white;
-    border: 2px solid gray;
+    border: 1px solid lightgray;
     border-radius: 5px;
-    box-shadow: 0px 0px 15px #00000041;
+    box-shadow: 0px 0px 15px #163a6726;
     z-index: 100;
     font-family: sans-serif;
     padding: 5px;

@@ -10,6 +10,7 @@ specifiers:
   eslint: ^8.28.0
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
+  mdsvex: ^0.10.6
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
   publint: ^0.1.9
@@ -30,6 +31,7 @@ devDependencies:
   eslint: 8.35.0
   eslint-config-prettier: 8.6.0_eslint@8.35.0
   eslint-plugin-svelte3: 4.0.0_n4ieifq2d7jq3sqoe474cgqlim
+  mdsvex: 0.10.6_svelte@3.55.1
   prettier: 2.8.4
   prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
   publint: 0.1.9
@@ -440,6 +442,10 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/unist/2.0.6:
+    resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.54.0_6mj2wypvdnknez7kws2nfdgupi:
@@ -1320,6 +1326,18 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
+  /mdsvex/0.10.6_svelte@3.55.1:
+    resolution: {integrity: sha512-aGRDY0r5jx9+OOgFdyB9Xm3EBr9OUmcrTDPWLB7a7g8VPRxzPy4MOBmcVYgz7ErhAJ7bZ/coUoj6aHio3x/2mA==}
+    peerDependencies:
+      svelte: 3.x
+    dependencies:
+      '@types/unist': 2.0.6
+      prism-svelte: 0.4.7
+      prismjs: 1.29.0
+      svelte: 3.55.1
+      vfile-message: 2.0.4
+    dev: true
+
   /merge2/1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
@@ -1548,6 +1566,15 @@ packages:
     resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: true
+
+  /prism-svelte/0.4.7:
+    resolution: {integrity: sha512-yABh19CYbM24V7aS7TuPYRNMqthxwbvx6FF/Rw920YbyBWO3tnyPIqRMgHuSVsLmuHkkBS1Akyof463FVdkeDQ==}
+    dev: true
+
+  /prismjs/1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
     dev: true
 
   /publint/0.1.9:
@@ -1930,10 +1957,23 @@ packages:
       busboy: 1.6.0
     dev: true
 
+  /unist-util-stringify-position/2.0.3:
+    resolution: {integrity: sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==}
+    dependencies:
+      '@types/unist': 2.0.6
+    dev: true
+
   /uri-js/4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.3.0
+    dev: true
+
+  /vfile-message/2.0.4:
+    resolution: {integrity: sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==}
+    dependencies:
+      '@types/unist': 2.0.6
+      unist-util-stringify-position: 2.0.3
     dev: true
 
   /vite/4.1.4:

@@ -1,3 +1,8 @@
+export type ContextMenuSchema = { 
+  container?: HTMLElement, 
+  nodes: ContextMenuSchemaNode[], 
+};
+
 export type ContextMenuSchemaNode = ContextMenuSchemaParentNode | ContextMenuSchemaActionNode;
 
 export type ContextMenuSchemaParentNode = {

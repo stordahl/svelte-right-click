@@ -4,12 +4,11 @@
   export let item:ContextMenuSchemaParentNode;
 
   let open = item.node_is_open || false;
+  //open = true;
   
   let parentElement:HTMLElement;
 
   $:rect = parentElement?.getBoundingClientRect();
-
-  $:console.log(rect)
 </script>
 
 <li 
@@ -22,12 +21,14 @@
   {#if open}
     <ul 
       class="svelte-context-menu-child-node" 
-      style:--context-menu-child-x={`${rect?.width + 5}px`} 
+      style:--context-menu-child-x={`${rect?.width}px`} 
       style:--context-menu-child-y={`0px`}
     >
       {#each item.children as child}
         <li class="svelte-context-menu-node">
-          <button on:click={child.callback}>{child.node_content}</button>
+          {#if child.node_type == "action"}
+            <button on:click={child.callback}>{child.node_content}</button>
+          {/if}
         </li>
       {/each}
     </ul>
@@ -38,11 +39,17 @@
   button {
     padding: 0;
     border: none;
-    background-color: white;
+    background-color: transparent;
+    white-space: nowrap;
+  }
+
+  button:hover {
+    background-color: lightgray;
   }
 
   li.svelte-context-menu-node {
     padding: 4px;
+    position: relative;
   }
     
   li.svelte-context-menu-node:hover, button:hover {
@@ -63,7 +70,10 @@
     position: absolute;
     top: var(--context-menu-child-y);
     left: var(--context-menu-child-x);
-    padding: 0;
+    padding: 5px;
     list-style: none;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
   }
 </style>

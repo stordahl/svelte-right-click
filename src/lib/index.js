@@ -1,1 +1,6 @@
-// Reexport your entry components here
+// components
+export { default as ContextMenu } from "./ContextMenu.svelte";
+
+// stores
+export { contextMenuSchema } from "./ContextMenuSchema";
+
