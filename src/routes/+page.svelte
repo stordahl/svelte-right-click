@@ -29,7 +29,7 @@
   #example-container {
     margin: 2rem auto;
     min-height: 300px;
-    border: 2px dashed var(--black);
+    border: 2px solid var(--white);
     border-radius: 8px;
     display: flex;
     align-items: center;

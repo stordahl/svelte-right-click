@@ -2,7 +2,9 @@
 </script>
 
 <header>
-  <h1>svelte-context-menu</h1>
+  <h1>
+    <a href="/">svelte-context-menu</a>
+  </h1>
   <div>
     <a href="https://github.com/stordahl/svelte-context-menu">
       <img src="/images/github.svg" class="github" alt="Github Octocat Logo"/>
@@ -38,6 +40,11 @@
 
   header > h1 {
     margin: 0;
+  }
+
+  header > h1 > a {
+    color: var(--text-primary);
+    text-decoration: none;
   }
 
   header > div {

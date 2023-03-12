@@ -16,24 +16,29 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
-	background-color: var(--bg);
+	background: var(--black);
   padding: 2.5rem;
   display: flex;
 
-  --white: #eeeef7;
-  --black: #2A2E38;
-  --blue: #1551d8;
+  --ochre: hsla(34, 79%, 42%, 1);
+  --earth-yellow: hsla(34, 79%, 68%, 1);
+  --seashell: hsla(12, 48%, 94%, 1);
+  --jet: hsla(15, 3%, 26%, 1);
+  --raisin-black: hsla(240, 9%, 13%, 1);
+
+  --white: var(--seashell);
+  --black: var(--raisin-black);
+  --grey: var(--jet);
+  --gray: var(--grey);
+  --yellow: var(--ochre);
+  --light-yellow: var(--earth-yellow);
+
+  --blue: rgba(0,95,227,1);
   --light-blue: #7d9dff;
-  --trans-bg: #ffffffd9;
-  --heading-family: 'Helvetica Neue', sans-serif;
-  --heading-weight: 900;
-  --copy-family: 'Helvetica Neue', sans-serif;
-  --copy-weight: 500;
 
 	/* Dynamic Colors */
-	--text-primary: var(--black);
+	--text-primary: var(--white);
 	--text-secondary: var(--blue);
-	--bg: var(--white);
 }
 
 body > div {
