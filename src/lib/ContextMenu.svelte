@@ -1,6 +1,7 @@
 <script lang="ts">
   import ContextMenuParentNode from "./ContextMenuParentNode.svelte";
   import { contextMenuSchema, browserSchema } from "./ContextMenuSchema";
+  import { calculateCoordsFromChild } from "./utils";
   
   export let open = false;
   export let renderDefaults = true;
@@ -12,17 +13,38 @@
   $: contain = $contextMenuSchema?.container || null;
 
   function open_context_menu(event:MouseEvent){
+    const target = event.target as HTMLElement;
+    const { left, top } = target.getBoundingClientRect();
     open = false;
     
     if(!!contain && 
-      <HTMLElement> event.target !== contain && 
-      ![...contain.children].includes(<HTMLElement> event.target)
+      target !== contain && 
+      ![...contain.children].includes(target)
     ) return
     
     event.preventDefault();
     open = true;
-    menuXPosition = event.clientX;
-    menuYPosition = event.clientY;
+
+    if(contain){
+      contain.style.position = "relative";
+      let data = calculateCoordsFromChild({
+        eventX: event.offsetX,
+        eventY: event.offsetY,
+        childX: left,
+        childY: top,
+        container: contain,
+      })
+      if(target !== contain){
+        menuXPosition = data.x;
+        menuYPosition = data.y;
+      } else {
+        menuXPosition = event.offsetX;
+        menuYPosition = event.offsetY;
+      }
+    } else {  
+      menuXPosition = event.clientX;
+      menuYPosition = event.clientY;
+    }
   }
 
   function handle_click_outside(event:MouseEvent){
@@ -30,7 +52,7 @@
   }
 </script>
 
-<svelte:window on:contextmenu={open_context_menu} on:click={handle_click_outside}/>
+<svelte:window on:contextmenu={open_context_menu} on:click={handle_click_outside} />
 
 {#if open}
   <div id="svelte-context-menu" style:--context-menu-x={`${menuXPosition}px`} style:--context-menu-y={`${menuYPosition}px`}>

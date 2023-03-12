@@ -17,3 +17,13 @@ export type ContextMenuSchemaActionNode = {
   node_content: string,
   callback: () => void,
 }
+
+// internal
+export type CalculateCoordsFromChildArg = {
+  eventX: number, 
+  eventY: number,
+  childX: number,
+  childY: number,
+  container: HTMLElement,
+}
+
