@@ -1,5 +1,5 @@
 {
-	"name": "svelte-context-menu",
+	"name": "svelte-right-click",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
