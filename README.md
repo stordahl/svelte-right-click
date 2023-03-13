@@ -6,22 +6,25 @@ A custom context menu for your Svelte application.
 
 > Currently in Development
 
+## Features
+- Schema Driven ✏️
+- TypeScript Support ✅
+- Stylable via Style Props 🎨
+- Support for browser built-in context menu functions 💻
+
 ## Todo
 
-- [x] Support all native browser context menu functions
 - [ ] Support for style props
-- [ ] Action callback wrapper
 
 ## Docs Todo
 
 - Write content for
-  - [ ] Basic Usage
+  - [x] Basic Usage
   - [ ] Browser Built ins
-  - [ ] Getting Started
-  - [ ] Install
+  - [x] Getting Started
+  - [x] Install
   - [ ] Schemas
   - [ ] Style
-  - [ ] Icons
   - [ ] Types
 - [ ] Store lang state in localStorage
 - [ ] Update README
