@@ -3,13 +3,13 @@
 
 <header>
   <h1>
-    <a href="/">svelte-context-menu</a>
+    <a href="/">svelte-right-click</a>
   </h1>
   <div>
-    <a href="https://github.com/stordahl/svelte-context-menu">
+    <a href="https://github.com/stordahl/svelte-right-click">
       <img src="/images/github.svg" class="github" alt="Github Octocat Logo"/>
     </a>
-    <a href="https://npmjs.org/stordahl/svelte-context-menu">
+    <a href="https://npmjs.org/stordahl/svelte-right-click">
       <img src="/images/npm.svg" alt="npm logotype"/>
     </a>
   </div>

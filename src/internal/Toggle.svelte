@@ -33,8 +33,8 @@
 </div>
 
 <style>
-	:root {
-		--accent-color: CornflowerBlue;
+	:global(body) {
+		--accent-color: var(--yellow);
 		--gray: #ccc;
 	}
 

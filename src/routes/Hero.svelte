@@ -1,7 +1,3 @@
-<script>
-
-</script>
-
 <section>
   <span>a custom context menu for your Svelte application</span>
     <a href="/docs/getting-started" class="button">Read the docs</a>
@@ -9,9 +5,10 @@
 
 <style>
   section {
+    grid-area: hero;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   

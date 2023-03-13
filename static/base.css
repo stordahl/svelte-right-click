@@ -67,8 +67,8 @@ blockquote {
 }
 
 p code {
-  background-color: var(--text-primary);
-  color: var(--bg);
+  background-color: var(--white);
+  color: var(--black);
   padding: 3px;
   border-radius: 5px;
   white-space: nowrap;
@@ -92,11 +92,19 @@ section {
   margin-bottom: 30px;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited:not(.button) {
+  color: var(--light-yellow);
+}
+
 .button {
-  background: var(--blue);
+  background: var(--light-yellow);
   padding: 15px;
   border-radius: 8px;
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 

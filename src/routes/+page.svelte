@@ -13,7 +13,6 @@
   <Hero />
   <Install />
 
-  <h2>Demo</h2>
   <div id="example-container" bind:this={container}>
     <span>Right Click here!</span>
     <ContextMenu />
@@ -22,14 +21,19 @@
 
 <style>
   .wrapper {
-    max-width: 900px;
+    max-width: 1500px;
     margin: auto;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "hero demo" "install install";
+    gap: 3rem 0;
   }
 
   #example-container {
-    margin: 2rem auto;
+    grid-area: demo;
     min-height: 300px;
-    border: 2px solid var(--white);
+    border: 2px solid var(--yellow);
     border-radius: 8px;
     display: flex;
     align-items: center;

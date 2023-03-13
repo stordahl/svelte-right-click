@@ -9,7 +9,7 @@
 ```svelte
 <!-- +layout.svelte -->
 <script lang="ts">
-  import ContextMenu from "svelte-context-menu";
+  import ContextMenu from "svelte-right-click";
 <\script>
 
 <ContextMenu />
@@ -18,8 +18,8 @@
 ```svelte
 <!-- +page.svelte -->
 <script lang="ts">
-  import { contextMenuSchema } from "svelte-context-menu";
-  import type { ContextMenuSchema } from "svelte-context-menu";
+  import { contextMenuSchema } from "svelte-right-click";
+  import type { ContextMenuSchema } from "svelte-right-click";
 
   // Create a Schema for your context menu
   const schema:ContextMenuSchema = {
@@ -41,7 +41,7 @@
 ```svelte
 <!-- +layout.svelte -->
 <script>
-  import ContextMenu from "svelte-context-menu";
+  import ContextMenu from "svelte-right-click";
 <\script>
 
 <ContextMenu />
@@ -50,7 +50,7 @@
 ```svelte
 <!-- +page.svelte -->
 <script>
-  import { contextMenuSchema } from "svelte-context-menu";
+  import { contextMenuSchema } from "svelte-right-click";
 
   // Create a Schema for your context menu
   const schema = {

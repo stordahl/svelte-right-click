@@ -2,9 +2,9 @@
   type Manager = { name: string, cmd: string };
 
   const managers:Manager[] = [
-    { name: "npm", cmd: "npm install --save-dev svelte-context-menu" }, 
-    { name: "pnpm", cmd: "pnpm add svelte-context-menu" },
-    { name: "yarn", cmd: "yarn add svelte-context-menu" },
+    { name: "npm", cmd: "npm install --save-dev svelte-right-click" }, 
+    { name: "pnpm", cmd: "pnpm add svelte-right-click" },
+    { name: "yarn", cmd: "yarn add svelte-right-click" },
   ];
 
   let selection:Manager = managers[0];
@@ -17,7 +17,6 @@
   */
 </script>
 
-<h2>Install</h2>
 <section class="install-wrapper">
   <span>
     {selection.cmd}
@@ -41,12 +40,13 @@
 
 <style>
   .install-wrapper {
+    grid-area: install;
     display: flex;
-
     flex-direction: column;
     align-items: center;
     gap: 1.2rem;
     background-color: var(--black);
+    border: 2px solid var(--yellow);
     border-radius: 8px;
     padding: 2rem;
     position: relative;
