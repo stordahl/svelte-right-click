@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { writable } from "svelte/store";
   import ContextMenuParentNode from "./ContextMenuParentNode.svelte";
   import { contextMenuSchema, browserSchema } from "./ContextMenuSchema";
-  import { calculateCoordsFromChild } from "./utils";
+  import { callbackWrapper, calculateCoordsFromChild } from "./utils";
   
-  export let open = false;
+  export let open = writable(false);
   export let renderDefaults = true;
 
   let menuXPosition = 0;
@@ -15,7 +16,7 @@
   function open_context_menu(event:MouseEvent){
     const target = event.target as HTMLElement;
     const { left, top } = target.getBoundingClientRect();
-    open = false;
+    $open = false;
     
     if(!!contain && 
       target !== contain && 
@@ -23,7 +24,7 @@
     ) return
     
     event.preventDefault();
-    open = true;
+    $open = true;
 
     if(contain){
       contain.style.position = "relative";
@@ -48,19 +49,29 @@
   }
 
   function handle_click_outside(event:MouseEvent){
-    if(event.target.getAttribute("id") !== "svelte-context-menu") open = false; 
+    const target = event.target as HTMLElement;
+    if(target.getAttribute("id") !== "svelte-context-menu") $open = false; 
   }
 </script>
 
-<svelte:window on:contextmenu={open_context_menu} on:click={handle_click_outside} />
+<svelte:window 
+  on:contextmenu={open_context_menu} 
+  on:click={handle_click_outside} 
+  on:beforeprint={() => {
+    setTimeout(() => open.set(false), 300);
+  }}
+/>
 
-{#if open}
+{#if $open}
   <div id="svelte-context-menu" style:--context-menu-x={`${menuXPosition}px`} style:--context-menu-y={`${menuYPosition}px`}>
     <ul>
     {#each $contextMenuSchema.nodes as item}
       {#if item.node_type == "action"}
+        {@const cb = item.callback}
         <li class="svelte-context-menu-node">
-          <button on:click={item.callback}>{item.node_content}</button>
+          <button 
+            on:click={() => callbackWrapper(cb, open)}
+          >{item.node_content}</button>
         </li>
       {:else if item.node_type == "parent"}
         <ContextMenuParentNode {item} />
@@ -70,11 +81,12 @@
       <hr/>
       {#each $browserSchema.nodes as item}
         {#if item.node_type == "action"}
+          {@const cb = item.callback}
           <li class="svelte-context-menu-node">
-            <button on:click={item.callback}>{item.node_content}</button>
+            <button on:click={() => callbackWrapper(cb, open)}>{item.node_content}</button>
           </li>
         {:else if item.node_type == "parent"}
-          <ContextMenuParentNode {item} />
+          <ContextMenuParentNode {item}/>
         {/if}
       {/each}
     {/if}

@@ -1,4 +1,13 @@
+import type { Writable } from "svelte/store";
 import type { CalculateCoordsFromChildArg } from "./types";
+
+/*
+  * @name callbackWrapper
+  * @description calls the given callback, passing the openState store as an argument */
+export function callbackWrapper(cb:(openState:Writable<boolean>) => void, openState:Writable<boolean>) {
+  cb(openState);
+}
+
 /**
   * @name pageBack
   * @description A generic wrapper around history.back() with error handling */
@@ -18,7 +27,8 @@ export function pageReload() {
 /**
   * @name pagePrint
   * @description A generic wrapper around window.print() with error handling */
-export function pagePrint() {
+export function pagePrint(state:Writable<boolean>) {
+  window.addEventListener("beforeprint", () => state.set(false))
   if(!window || !window.print) throw new Error("svelte-context-menu(pagePrint): window.print Method not found.");
   window.print();
 }

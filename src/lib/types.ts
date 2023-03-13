@@ -1,3 +1,5 @@
+import type { Writable } from "svelte/store";
+
 export type ContextMenuSchema = { 
   container?: HTMLElement, 
   nodes: ContextMenuSchemaNode[], 
@@ -15,7 +17,7 @@ export type ContextMenuSchemaParentNode = {
 export type ContextMenuSchemaActionNode = {
   node_type: "action",
   node_content: string,
-  callback: () => void,
+  callback: (openState?:Writable<boolean>) => void,
 }
 
 // internal
