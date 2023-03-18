@@ -3,6 +3,7 @@
 </script>
 
 <section>
+
 ## Getting Started
 
 To get started with svelte-context-menu, first install the package in your project.

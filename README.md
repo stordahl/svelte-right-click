@@ -23,8 +23,7 @@ A custom context menu for your Svelte application.
   - [ ] Browser Built ins
   - [x] Getting Started
   - [x] Install
-  - [ ] Schemas
+  - [x] Schemas
   - [ ] Style
-  - [ ] Types
 - [ ] Store lang state in localStorage
 - [ ] Update README
