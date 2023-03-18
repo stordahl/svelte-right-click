@@ -16,10 +16,8 @@
       <a href="/docs/install">Installation</a>
       <a href="/docs/basic-usage">Basic Usage</a>
       <a href="/docs/schemas">Schemas</a>
-      <a href="/docs/browser-builtins">Browser Built-ins</a>
       <a href="/docs/style">Styling</a>
-      <a href="/docs/icons">Icons</a>
-      <a href="/docs/types">Types</a>
+      <a href="/docs/browser-builtins">Browser Built-ins</a>
     </nav>
     <div>
      <Toggle bind:value={toggleValue} onLabel="TS" offLabel="JS" /> 

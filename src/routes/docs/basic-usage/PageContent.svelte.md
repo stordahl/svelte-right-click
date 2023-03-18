@@ -2,6 +2,7 @@
  import { lang } from "../lang"; 
 </script>
 
+<section>
 ## Basic Usage
 
 {#if $lang === "TS"}
@@ -68,3 +69,4 @@
 ```
 
 {/if}
+</section>

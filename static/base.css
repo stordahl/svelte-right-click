@@ -61,7 +61,7 @@ p:not(blockquote p){
 
 blockquote {
   font-size: 1.2rem;
-  border-left: 2px solid var(--text-secondary);
+  border-left: 2px solid var(--yellow);
   padding-left: 15px;
   margin-bottom: 20px;
 }
@@ -90,6 +90,14 @@ code span { color: unset; }
 
 section {
   margin-bottom: 30px;
+}
+
+section > * {
+  margin-bottom: 20px;
+}
+
+a:not(.button) {
+  color: var(--light-yellow);
 }
 
 a:hover {

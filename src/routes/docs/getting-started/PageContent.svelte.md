@@ -2,6 +2,7 @@
   import { lang } from "../lang";
 </script>
 
+<section>
 ## Getting Started
 
 To get started with svelte-context-menu, first install the package in your project.
@@ -61,3 +62,5 @@ Initialize the component, create a basic schema, and pass the schema to the `con
 ```
 
 {/if}
+
+</section>

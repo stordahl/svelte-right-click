@@ -10,7 +10,7 @@ Although there are existing libaries in the Svelte ecosystem for custom context 
 
 Due to this design philosophy, it's recommended to place the `<ContextMenu />` component at the root of your application (whether that is a your root +layout.svelte in SvelteKit, or in the App.svelte root of an SPA). From there, simply update or set a new schema into the provided store, and the context menu will update accordingly.
 
+If this philosophy doesn't jive with how you're building your app, and you want something more declarative, I recommend checking out Vincent La's library [svelte-contextmenu](https://github.com/vincentlaucsb/svelte-contextmenu).
+
 </section>
-
-
 

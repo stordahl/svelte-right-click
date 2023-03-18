@@ -21,7 +21,7 @@
 
 <style>
   .wrapper {
-    max-width: 1500px;
+    max-width: 1000px;
     margin: auto;
     display: grid;
     grid-template-rows: auto;
