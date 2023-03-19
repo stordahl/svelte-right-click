@@ -18,6 +18,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Install Playwright Browsers
-        run: pnpx playwright install
+        run: pnpx playwright install --with-deps
       - name: Run Playwright tests
         run: npx playwright test
