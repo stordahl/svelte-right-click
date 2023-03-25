@@ -4,6 +4,11 @@
 
 A custom context menu for your Svelte application.
 
+[![Unit tests](https://github.com/stordahl/svelte-right-click/actions/workflows/vitest.yml/badge.svg)](https://github.com/stordahl/svelte-right-click/actions/workflows/vitest.yml)
+
+[![E2E tests](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml/badge.svg)](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml)
+
+
 > Currently in Development
 
 ## Features
