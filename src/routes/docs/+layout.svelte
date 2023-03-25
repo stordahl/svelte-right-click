@@ -15,6 +15,7 @@
       <a href="/docs/philosophy">Philosophy</a>
       <a href="/docs/install">Installation</a>
       <a href="/docs/basic-usage">Basic Usage</a>
+      <a href="/docs/props">Props</a>
       <a href="/docs/schemas">Schemas</a>
       <a href="/docs/style">Styling</a>
       <a href="/docs/browser-builtins">Browser Built-ins</a>

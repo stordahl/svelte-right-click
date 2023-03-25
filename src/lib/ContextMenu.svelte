@@ -101,13 +101,13 @@
     left: var(--context-menu-x);
     width: max-content;
     height: auto;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px #163a6726;
+    background-color: var(--background-color, white);
+    border: var(--border, 1px solid lightgray);
+    border-radius: var(--border-radius, 5px);
+    box-shadow: var(--box-shadow, 0px 0px 15px #163a6726);
     z-index: 100;
-    font-family: sans-serif;
-    padding: 5px;
+    font-family: var(--font-family, sans-serif);
+    padding: var(--padding, 5px);
   }
 
   button {
@@ -115,7 +115,7 @@
   }
 
   li.svelte-context-menu-node {
-    padding: 4px;
+    padding: var(--node-padding, 4px);
   }
     
   li.svelte-context-menu-node:hover, button:hover {
@@ -124,12 +124,12 @@
 
   li.svelte-context-menu-node,
   li.svelte-context-menu-node > button {
-    font-size: 1rem; 
-    border-radius: 3px;
+    font-size: var(--font-size, 1rem); 
+    border-radius: var(--node-border-radius, 3px);
   }
 
   li.svelte-context-menu-node:hover {
-    background-color: lightgray;
+    background-color: var(--node-background-hover, lightgray);
   }
 
   ul, li {

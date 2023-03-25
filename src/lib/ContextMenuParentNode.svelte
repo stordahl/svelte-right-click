@@ -50,7 +50,7 @@
   }
 
   li.svelte-context-menu-node {
-    padding: 4px;
+    padding: var(--node-padding, 4px);
     position: relative;
   }
     
@@ -59,13 +59,13 @@
   }
   
   li.svelte-context-menu-node:hover {
-    background-color: lightgray;
+    background-color: var(--node-background-hover, lightgray);
   }
 
   li.svelte-context-menu-node,
   li.svelte-context-menu-node > button {
-    font-size: 1rem; 
-    border-radius: 3px;
+    font-size: var(--font-size, 1rem); 
+    border-radius: var(--node-border-radius, 3px);
   }
 
   ul.svelte-context-menu-child-node {

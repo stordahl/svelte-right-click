@@ -119,3 +119,24 @@ a:visited:not(.button) {
 .button:hover {
   text-decoration: underline;
 }
+
+table {
+  --table-border: 2px solid var(--light-yellow);
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  color: var(--light-yellow);
+  border: var(--table-border);
+}
+
+thead, tr {
+  border-bottom: var(--table-border);
+}
+
+td, th {
+  padding: 10px;
+  border-right: var(--table-border);
+}
+
+th {
+  font-size:  1.2rem;
+}

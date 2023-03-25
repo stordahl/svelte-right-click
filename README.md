@@ -12,18 +12,20 @@ A custom context menu for your Svelte application.
 - Stylable via Style Props 🎨
 - Support for browser built-in context menu functions 💻
 
+## Installation
+
+```shell
+npm install --save-dev svelte-right-click
+# yarn add svelte-right-click
+# pnpm add svelte-right-click
+```
+
+## Docs
+
+Read the full documentation [here](https://svelte-right-click.vercel.app)
+
 ## Todo
 
-- [ ] Support for style props
-
-## Docs Todo
-
-- Write content for
-  - [x] Basic Usage
-  - [ ] Browser Built ins
-  - [x] Getting Started
-  - [x] Install
-  - [x] Schemas
-  - [ ] Style
+- [ ] Write content for Browser Built ins
 - [ ] Store lang state in localStorage
 - [ ] Update README
