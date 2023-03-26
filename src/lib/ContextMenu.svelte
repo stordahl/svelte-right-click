@@ -95,7 +95,7 @@
 {/if}
 
 <style>
-  #svelte-context-menu {
+  #svelte-right-click {
     position: absolute;
     top: var(--context-menu-y);
     left: var(--context-menu-x);
