@@ -63,7 +63,7 @@
 />
 
 {#if $open}
-  <div id="svelte-context-menu" style:--context-menu-x={`${menuXPosition}px`} style:--context-menu-y={`${menuYPosition}px`}>
+  <div id="svelte-right-click" style:--context-menu-x={`${menuXPosition}px`} style:--context-menu-y={`${menuYPosition}px`}>
     <ul>
     {#each $contextMenuSchema.nodes as item}
       {#if item.node_type == "action"}
