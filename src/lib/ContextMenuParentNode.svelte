@@ -43,6 +43,7 @@
     border: none;
     background-color: transparent;
     white-space: nowrap;
+    color: var(--color, #000000);
   }
 
   button:hover {
