@@ -5,7 +5,7 @@
 Override the context menu's default styles using Svelte Style Props. Available props include...
 
 | Name                    | Description                             | Default                |
-|-------------------------|-----------------------------------------|------------------------|
+| ----------------------- | --------------------------------------- | ---------------------- |
 | --background-color      | Parent elements background color        | #FFFFFF                |
 | --border                | Parent elements border                  | 1px solid lightgrey    |
 | --border-radius         | Parent elements border radius           | 5px                    |

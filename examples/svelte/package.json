@@ -1,19 +1,19 @@
 {
-  "name": "svelte-right-click-example",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.3",
-    "svelte": "^3.55.1",
-    "vite": "^4.2.0"
-  },
-  "dependencies": {
-    "svelte-right-click": "latest"
-  }
+	"name": "svelte-right-click-example",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@sveltejs/vite-plugin-svelte": "^2.0.3",
+		"svelte": "^3.55.1",
+		"vite": "^4.2.0"
+	},
+	"dependencies": {
+		"svelte-right-click": "latest"
+	}
 }

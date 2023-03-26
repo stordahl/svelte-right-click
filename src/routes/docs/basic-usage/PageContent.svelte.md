@@ -20,21 +20,21 @@
 ```svelte
 <!-- +page.svelte -->
 <script lang="ts">
-  import { contextMenuSchema } from "svelte-right-click";
-  import type { ContextMenuSchema } from "svelte-right-click";
+	import { contextMenuSchema } from 'svelte-right-click';
+	import type { ContextMenuSchema } from 'svelte-right-click';
 
-  // Create a Schema for your context menu
-  const schema:ContextMenuSchema = {
-    nodes: [
-      {
-        node_type: "action",
-        node_content: "Fire an Alert!",
-        callback: () => alert('Clicked the Custom Context Menu!'),
-      }
-    ],
-  };
+	// Create a Schema for your context menu
+	const schema: ContextMenuSchema = {
+		nodes: [
+			{
+				node_type: 'action',
+				node_content: 'Fire an Alert!',
+				callback: () => alert('Clicked the Custom Context Menu!')
+			}
+		]
+	};
 
-  contextMenuSchema.set(schema);
+	contextMenuSchema.set(schema);
 </script>
 ```
 
@@ -52,20 +52,20 @@
 ```svelte
 <!-- +page.svelte -->
 <script>
-  import { contextMenuSchema } from "svelte-right-click";
+	import { contextMenuSchema } from 'svelte-right-click';
 
-  // Create a Schema for your context menu
-  const schema = {
-    nodes: [
-      {
-        node_type: "action",
-        node_content: "Fire an Alert!",
-        callback: () => alert('Clicked the Custom Context Menu!'),
-      }
-    ],
-  };
+	// Create a Schema for your context menu
+	const schema = {
+		nodes: [
+			{
+				node_type: 'action',
+				node_content: 'Fire an Alert!',
+				callback: () => alert('Clicked the Custom Context Menu!')
+			}
+		]
+	};
 
-  contextMenuSchema.set(schema);
+	contextMenuSchema.set(schema);
 </script>
 ```
 

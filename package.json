@@ -3,7 +3,7 @@
 	"version": "0.0.5",
 	"scripts": {
 		"dev": "vite dev",
-    "dev:ex:svelte": "cd examples/svelte && pnpm run dev",
+		"dev:ex:svelte": "cd examples/svelte && pnpm run dev",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",

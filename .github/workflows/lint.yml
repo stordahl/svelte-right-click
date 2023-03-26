@@ -1,4 +1,4 @@
-name: Vitest
+name: Lint
 
 on:
   push:
@@ -22,4 +22,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm i -g pnpm
       - run: pnpm install
-      - run: pnpm run test:unit
+      - run: pnpm run lint
+    # - run: pnpm run check

@@ -1,40 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-  max-width: 100vw;
-  font-family: 'DM Mono', monospace;
+	max-width: 100vw;
+	font-family: 'DM Mono', monospace;
 }
 
 body {
-  max-width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
-  font-size: 16px;
+	max-width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	font-size: 16px;
 	background: var(--black);
-  padding: 2.5rem;
-  display: flex;
+	padding: 2.5rem;
+	display: flex;
 
-  --ochre: hsla(34, 79%, 42%, 1);
-  --earth-yellow: hsla(34, 79%, 68%, 1);
-  --seashell: hsla(12, 48%, 94%, 1);
-  --jet: hsla(15, 3%, 26%, 1);
-  --raisin-black: hsla(240, 9%, 13%, 1);
+	--ochre: hsla(34, 79%, 42%, 1);
+	--earth-yellow: hsla(34, 79%, 68%, 1);
+	--seashell: hsla(12, 48%, 94%, 1);
+	--jet: hsla(15, 3%, 26%, 1);
+	--raisin-black: hsla(240, 9%, 13%, 1);
 
-  --white: var(--seashell);
-  --black: var(--raisin-black);
-  --grey: var(--jet);
-  --gray: var(--grey);
-  --yellow: var(--ochre);
-  --light-yellow: var(--earth-yellow);
+	--white: var(--seashell);
+	--black: var(--raisin-black);
+	--grey: var(--jet);
+	--gray: var(--grey);
+	--yellow: var(--ochre);
+	--light-yellow: var(--earth-yellow);
 
-  --blue: rgba(0,95,227,1);
-  --light-blue: #7d9dff;
+	--blue: rgba(0, 95, 227, 1);
+	--light-blue: #7d9dff;
 
 	/* Dynamic Colors */
 	--text-primary: var(--white);
@@ -42,101 +42,119 @@ body {
 }
 
 body > div {
-  min-height: 100%;
-  width: 100%;
+	min-height: 100%;
+	width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
-  color: var(--text-primary);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+	color: var(--text-primary);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 20px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 20px;
 }
 
-p:not(blockquote p){
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+p:not(blockquote p) {
+	font-size: 1.1rem;
+	margin-bottom: 15px;
 }
 
 blockquote {
-  font-size: 1.2rem;
-  border-left: 2px solid var(--yellow);
-  padding-left: 15px;
-  margin-bottom: 20px;
+	font-size: 1.2rem;
+	border-left: 2px solid var(--yellow);
+	padding-left: 15px;
+	margin-bottom: 20px;
 }
 
 p code {
-  background-color: var(--white);
-  color: var(--black);
-  padding: 3px;
-  border-radius: 5px;
-  white-space: nowrap;
+	background-color: var(--white);
+	color: var(--black);
+	padding: 3px;
+	border-radius: 5px;
+	white-space: nowrap;
 }
 
-pre, code {
-  font-size: 13px;
+pre,
+code {
+	font-size: 13px;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-  border-radius: 8px;
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	border-radius: 8px;
 }
 
-code span { color: unset; }
+code span {
+	color: unset;
+}
 
 .secondary {
-  color: var(--text-secondary);
+	color: var(--text-secondary);
 }
 
 section {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 section > * {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 a:not(.button) {
-  color: var(--light-yellow);
+	color: var(--light-yellow);
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 a:visited:not(.button) {
-  color: var(--light-yellow);
+	color: var(--light-yellow);
 }
 
 .button {
-  background: var(--light-yellow);
-  padding: 15px;
-  border-radius: 8px;
-  color: var(--black);
-  text-decoration: none;
+	background: var(--light-yellow);
+	padding: 15px;
+	border-radius: 8px;
+	color: var(--black);
+	text-decoration: none;
 }
 
 .button:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 table {
-  --table-border: 2px solid var(--light-yellow);
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-  color: var(--light-yellow);
-  border: var(--table-border);
+	--table-border: 2px solid var(--light-yellow);
+	border-collapse: collapse;
+	margin-bottom: 1rem;
+	color: var(--light-yellow);
+	border: var(--table-border);
 }
 
-thead, tr {
-  border-bottom: var(--table-border);
+thead,
+tr {
+	border-bottom: var(--table-border);
 }
 
-td, th {
-  padding: 10px;
-  border-right: var(--table-border);
+td,
+th {
+	padding: 10px;
+	border-right: var(--table-border);
 }
 
 th {
-  font-size:  1.2rem;
+	font-size: 1.2rem;
 }

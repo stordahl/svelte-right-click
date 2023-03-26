@@ -6,10 +6,10 @@ A custom context menu for your Svelte application.
 
 [![E2E tests](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml/badge.svg)](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml)
 
-
 > Currently in Active Development
 
 ## Features
+
 - Schema Driven ✏️
 - TypeScript Support ✅
 - Stylable via Style Props 🎨
