@@ -139,6 +139,7 @@
     background-color: transparent;
     border: none;
     padding: 0;
+    margin: 0;
     color: var(--color, #000000);
   }
 </style>

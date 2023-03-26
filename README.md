@@ -1,5 +1,3 @@
-<img src="https://user-images.githubusercontent.com/60861572/224575493-d2cc94a9-54e7-4633-866f-18928ca27585.svg" height="100px"/>
-
 # svelte-right-click
 
 A custom context menu for your Svelte application.
@@ -9,7 +7,7 @@ A custom context menu for your Svelte application.
 [![E2E tests](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml/badge.svg)](https://github.com/stordahl/svelte-right-click/actions/workflows/playwright.yml)
 
 
-> Currently in Development
+> Currently in Active Development
 
 ## Features
 - Schema Driven ✏️
@@ -29,8 +27,6 @@ npm install --save-dev svelte-right-click
 
 Read the full documentation [here](https://svelte-right-click.vercel.app)
 
-## Todo
+## Contributing
 
-- [ ] Write content for Browser Built ins
-- [ ] Store lang state in localStorage
-- [ ] Update README
+Contribution docs, issues templates, and more coming soon!

@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <header>
   <h1>
     <a href="/">svelte-right-click</a>
@@ -9,7 +6,7 @@
     <a href="https://github.com/stordahl/svelte-right-click">
       <img src="/images/github.svg" class="github" alt="Github Octocat Logo"/>
     </a>
-    <a href="https://npmjs.org/stordahl/svelte-right-click">
+    <a href="https://www.npmjs.com/package/svelte-right-click">
       <img src="/images/npm.svg" alt="npm logotype"/>
     </a>
   </div>
