@@ -8,6 +8,8 @@ A custom context menu for your Svelte application.
 
 > Currently in Active Development
 
+### [Svelte REPL demo](https://svelte.dev/repl/ccf8cf5e39f64955ba0317fc29d9b2b5?version=3.57.0)
+
 ## Features
 
 - Schema Driven ✏️
