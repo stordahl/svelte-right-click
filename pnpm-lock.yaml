@@ -1,4 +1,4 @@
-lockfileVersion: 6
+lockfileVersion: 5.4
 
 specifiers:
   '@playwright/test': ^1.32.1
